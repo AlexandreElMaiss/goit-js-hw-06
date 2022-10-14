@@ -12,3 +12,23 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryRef = document.querySelector('.gallery');
+
+const galleryListRef = images.map(({ url, alt }) => {
+  return `<li class="gallery__item"><img src="${url}" alt="${alt}" width='500'></li>`;
+})
+
+const galleryMarkup = galleryListRef.join('');
+galleryRef.insertAdjacentHTML('afterend', galleryMarkup);
+
+
+
+
+
+
+
+// Используй массив объектов images для создания элементов <img> вложенных в <li>. Для создания разметки используй шаблонные строки и метод insertAdjacentHTML().
+
+// Все элементы галереи должны добавляться в DOM за одну операцию вставки.
+// Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы.
