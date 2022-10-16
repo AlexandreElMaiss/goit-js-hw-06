@@ -4,10 +4,8 @@ const unfocusBlur = event => {
     const { dataset, value } = event.target;
     const validLength = Number(dataset.length);
     if ( validLength === value.length) {
-        event.target.classList.add('valid');
         changeClass('valid', 'invalid', event.target);
     } else {
-        event.target.classList.add('invalid');
         changeClass('invalid', 'valid', event.target);
     }
 };
